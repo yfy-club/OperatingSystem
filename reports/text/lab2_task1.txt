@@ -1,0 +1,21 @@
+# Captured 2026-11-26T19:44:23+08:00; actual run transcript (not a desktop screenshot)
+$ ./fork_children
+child: 79576
+parent: 79575
+child: 79577
+child: 79576
+parent: 79575
+child: 79577
+child: 79576
+parent: 79575
+child: 79576
+child: 79577
+parent: 79575
+child: 79576
+child: 79577
+parent: 79575
+child: 79576
+child: 79577
+parent: 79575
+child: 79577
+verified: 3 distinct PIDs, 6 lines each, 18 total

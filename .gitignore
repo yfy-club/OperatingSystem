@@ -1,0 +1,17 @@
+# 构建产物
+build/
+*.o
+*.obj
+*.exe
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+reports/text/.venv/
+
+# 编辑器与系统文件
+.idea/
+.vscode/
+*.swp
+.DS_Store

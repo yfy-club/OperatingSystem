@@ -1,0 +1,9 @@
+# Captured 2026-11-26T19:44:23+08:00; actual run transcript (not a desktop screenshot)
+$ ./process3 > /dev/null # harness starts a new session
+started PID = 79567, process group = 79567
+$ ps --sid 79567 -o pid,ppid,stat,pcpu,pmem,rss,comm
+    PID    PPID STAT %CPU %MEM   RSS COMMAND
+  79568   79389 R     100  0.0  1080 process3
+original parent exited; child adopted by test subreaper PID 79389
+$ kill -TERM -- -79567; wait/reap only this test group
+No processes remain in this session.

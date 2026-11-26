@@ -1,0 +1,7 @@
+# Captured 2026-11-26T19:44:23+08:00; actual run transcript (not a desktop screenshot)
+$ ./shm_comm # isolated IPC namespace
+parent 79652: created 512-byte shared memory, shmid = 0
+child 79653 wrote: child 79653 is writing data into the shared memory
+parent 79652 read : child 79653 is writing data into the shared memory
+parent 79652: shared memory removed
+IPC check: no shared memory segments remain

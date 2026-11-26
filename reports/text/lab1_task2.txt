@@ -1,0 +1,18 @@
+# Captured 2026-11-26T19:44:23+08:00; actual run transcript (not a desktop screenshot)
+$ ./process2 # capture until all stdout writers close
+This is parent process
+This is parent process
+This is parent process
+This is parent process
+This is parent process
+This is parent process
+This is parent process
+This is parent process
+This is parent process
+This is parent process
+This is parent process
+This is parent process
+... (display excerpt only; counting used full output)
+parent lines: 999
+child lines: 999
+total lines: 1998

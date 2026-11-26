@@ -1,0 +1,8 @@
+# Captured 2026-11-26T19:44:23+08:00; actual run transcript (not a desktop screenshot)
+$ ./msgq # isolated IPC namespace
+message queue created, key = 75, qid = 0
+client 79655: request sent, waiting for reply...
+server 79654: serving for client 79655
+client 79655: receive reply from 79654
+server 79654: message queue removed
+IPC check: no message queues remain

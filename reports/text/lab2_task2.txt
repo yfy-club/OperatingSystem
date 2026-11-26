@@ -1,0 +1,6 @@
+# Captured 2026-11-26T19:44:23+08:00; actual run transcript (not a desktop screenshot)
+$ ./fork_exec # cwd contains newprog
+child 79604: going to execvp a new program
+new program.
+newprog pid: 79604
+parent 79603: child 79604 finished, exit code 0
