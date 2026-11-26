@@ -15,5 +15,9 @@ jobs:
       - name: Build with strict warnings
         run: make all
 
-      - name: Run regression tests and report check
-        run: make test
+      # GitHub 托管 runner 禁止无特权 user namespace，用 root 创建独立 IPC 命名空间。
+      - name: Run regression tests
+        run: sudo --preserve-env=PATH python3 tests/verify.py
+
+      - name: Check reports are in sync
+        run: python3 reports/generate_reports.py --check

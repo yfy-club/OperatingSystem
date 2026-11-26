@@ -254,7 +254,11 @@ def main(record):
         for name, section in zip(("first", "best"), sections):
             RECORDS[f"lab5_{name}.txt"] = "$ ./alloc # selected complete algorithm section\n" + section + "\n"
         passed("allocator: all 11 steps of both algorithms match independent reference")
-        _, data, _ = run(["unshare", "--user", "--map-root-user", "--ipc", sys.executable,
+        if os.geteuid() == 0:
+            ipc_cmd = ["unshare", "--ipc"]
+        else:
+            ipc_cmd = ["unshare", "--user", "--map-root-user", "--ipc"]
+        _, data, _ = run([*ipc_cmd, sys.executable,
                           Path(__file__).resolve(), "--ipc-build", build], timeout=25)
         ipc = json.loads(data)
         RESULTS.extend(ipc["results"])

@@ -35,7 +35,7 @@ Linux 下操作系统课程实验的完整实现：进程观测与控制、进�
 
 ## 环境要求
 
-Linux、GCC、GNU Make、Python 3、procps 和 util-linux。完整测试还需要可用的无特权 user namespace 与 IPC namespace。
+Linux、GCC、GNU Make、Python 3、procps 和 util-linux。完整测试需要创建独立的 IPC namespace：普通用户依赖可用的无特权 user namespace，root 则直接使用 `unshare --ipc`；两者都不可用时测试明确失败。
 
 ## 快速开始
 
